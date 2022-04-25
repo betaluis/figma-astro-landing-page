@@ -15,9 +15,10 @@
 - Add heading at 3xl that says "price for everyone."
 - Text below at "md" that says "Three tiers to meet your needs."
 - Auto layout both of them. (Shift + A)
-- Add text "$1000"
-- Add "Starter plan" with a fill of muted. Make it a pill shape.
-- Copy text down "sm" that says" Landing page to maximize conferstion rate. Purple color.
+- Add text "$1000" with a size of 2xl
+- Add "Starter plan" with a fill of muted. Make it a pill shape. The size is "xs"
+    - To accomplish the "pill", add padding of 2px on top and 10px left/right. Border radius should be maximized until pill is formed. Text is dark.
+- Copy text down "sm" that says "Landing page to maximize conversion rate." Purple color.
 - Feather icons - Check
     - Color - muted.
 - Copy text with a size of "sm" that says "Custom branding" and make it an auto layout. Center it, and copy down. Make all an auto layout.
@@ -65,7 +66,7 @@
 ## Footer
 
 - "R" for rectangle
-- Drawk out the footer. 
+- Draw__ out the footer. 
 - Grab text - "sm" and edit to say "Copyright &copy; 2022 DESGN"
 - Auto layout and call "footer"
 - Copy blur and place it below footer. 
