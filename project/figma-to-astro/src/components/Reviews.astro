@@ -1,0 +1,65 @@
+---
+import Button from './Button.astro';
+import Icon from 'astro-icon';
+import reviews from '../data/reviews.json';
+---
+
+<section class="reviews-wrapper blur container-sm">
+    <h2 class="sr-only">Reviews</h2>
+    <div class="reviews-container container-xs">
+        <button class="reviews-btn grid-sm reviews-btn--prev" id="prev" aria-label="Previews Review">
+            <Icon
+                name="feather:chevron-left"
+                width="50"
+            /> 
+        </button>
+        <div class="reviews">
+        
+            {
+                reviews.slice(reviews.length - 1).map(review => (
+                    <div class="review grid-sm">
+                        <img src={review.avatar} alt={review.name} class="review-avatar">
+                        <p class="review-content">{review.content}</p>
+                        <p class="review-content text-gradient h3">{review.name}</p>
+                    </div>
+                ))
+            }
+            {
+                reviews.map(review => (
+                    <div class="review grid-sm">
+                        <img src={review.avatar} alt={review.name} class="review-avatar">
+                        <p class="review-content">{review.content}</p>
+                        <p class="review-content text-gradient h3">{review.name}</p>
+                    </div>
+                ))
+            }
+            {
+                reviews.slice(0,1).map(review => (
+                    <div class="review grid-sm">
+                        <img src={review.avatar} alt={review.name} class="review-avatar">
+                        <p class="review-content">{review.content}</p>
+                        <p class="review-content text-gradient h3">{review.name}</p>
+                    </div>
+                ))
+            }
+
+        </div>
+        <div class="indicator-container">
+
+            {
+                reviews.map(review => (
+                    <button class="indicator ${review?.active && 'active'}"></button>
+                ))
+            }
+
+        </div>
+        <button class="reviews-btn grid-sm reviews-btn--next" id="next" aria-label="Next Review">
+            <Icon
+                name="feather:chevron-right"
+                width="50"
+            /> 
+        </button>
+    </div>
+</section>
+
+<script src="../js/reviews.js" hoist type="module"></script>
