@@ -307,7 +307,7 @@
 - One more event lister on the reviews slider. 
 - It activates when the transition is over so we can make **isMoving** equal to false when the transition is over.
 
-        reviewsSlider.addEventListerner('transitioned', () => {
+        reviewsSlider.addEventListerner('transitionend', () => {
             isMoving = false;
             if(currentIndex === 0) {
                 currentIndex = reviews.length - 2;
